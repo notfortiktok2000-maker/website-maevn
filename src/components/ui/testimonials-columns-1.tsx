@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useReducedMotion } from "motion/react";
 
 export interface TestimonialItem {
   text: string;
@@ -22,12 +21,10 @@ export const TestimonialsColumn = ({
   testimonials,
   duration = 18,
 }: TestimonialsColumnProps) => {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <div className={className}>
       <div
-        className={`flex flex-col gap-6 pb-6 ${prefersReducedMotion ? '' : 'animate-marquee-vertical'}`}
+        className={`flex flex-col gap-6 pb-6 animate-marquee-vertical`}
         style={{ '--duration': `${duration || 18}s` } as React.CSSProperties}
       >
         {[0, 1].map((copyIndex) => (

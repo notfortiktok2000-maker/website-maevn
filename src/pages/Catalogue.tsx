@@ -325,7 +325,7 @@ export default function Catalogue() {
                   <img 
                     src={selectedProduct.images[activeImageIndex]} 
                     alt={`Montre MAEVN Watches ${selectedProduct.name} en détail`} 
-                    className={`w-full h-full mix-blend-multiply ${activeImageIndex === 0 ? 'object-contain' : 'object-cover rounded-lg'}`} 
+                    className={`w-full h-full mix-blend-multiply object-contain rounded-lg`} 
                   />
                 </div>
                 <div className="flex justify-center gap-3">
@@ -335,7 +335,7 @@ export default function Catalogue() {
                       onClick={(e) => { e.stopPropagation(); setActiveImageIndex(idx); }}
                       className={`w-16 h-16 rounded-md overflow-hidden border-2 transition-colors ${activeImageIndex === idx ? 'border-[#0a0a0a]' : 'border-transparent hover:border-gray-300'}`}
                     >
-                      <img src={img} alt="" className={`w-full h-full mix-blend-multiply ${idx === 0 ? 'object-contain bg-white' : 'object-cover'}`} />
+                      <img src={img} alt="" className={`w-full h-full mix-blend-multiply object-contain bg-white rounded-sm`} />
                     </button>
                   ))}
                 </div>
