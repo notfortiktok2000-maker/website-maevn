@@ -1,0 +1,6 @@
+{
+  "name": "Vantage Square Watch",
+  "description": "Landing page e-commerce pour la montre de luxe Vantage Square",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
