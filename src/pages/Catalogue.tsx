@@ -32,7 +32,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/Ldxg4KCb/Chat-GPT-Image-Aug-7-2026-04-26-32-PM-6-removebg-preview.png",
-      "https://i.ibb.co/ks410TB7/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-1.png"
+      "https://i.ibb.co/ks410TB7/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-1.png",
+      "https://i.ibb.co/hR3PRvSd/Chat-GPT-Image-Aug-7-2026-07-22-56-PM-2.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -44,7 +45,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/G4FKsdfs/Chat-GPT-Image-Aug-7-2026-04-26-30-PM-1-removebg-preview.png",
-      "https://i.ibb.co/sdTKqsCq/Chat-GPT-Image-Aug-7-2026-05-31-05-PM-4.png"
+      "https://i.ibb.co/sdTKqsCq/Chat-GPT-Image-Aug-7-2026-05-31-05-PM-4.png",
+      "https://i.ibb.co/mVRbPfdQ/Chat-GPT-Image-Aug-7-2026-07-22-56-PM-3.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -56,7 +58,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/XcGZ616/Chat-GPT-Image-Aug-7-2026-04-26-30-PM-2-removebg-preview.png",
-      "https://i.ibb.co/LXCNjpsz/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-2.png"
+      "https://i.ibb.co/LXCNjpsz/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-2.png",
+      "https://i.ibb.co/6RbMyjwP/Chat-GPT-Image-Aug-7-2026-07-22-57-PM-4.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -68,7 +71,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/YFCP2W5S/Chat-GPT-Image-Aug-7-2026-04-26-31-PM-3-removebg-preview.png",
-      "https://i.ibb.co/Pvmm2KQP/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-3.png"
+      "https://i.ibb.co/Pvmm2KQP/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-3.png",
+      "https://i.ibb.co/5hP9H6RJ/Chat-GPT-Image-Aug-7-2026-07-22-57-PM-5.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -80,7 +84,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/8ggWxRFp/Chat-GPT-Image-Aug-7-2026-04-23-04-PM-8-removebg-preview.png",
-      "https://i.ibb.co/JRYSLc8Z/Chat-GPT-Image-Aug-7-2026-05-31-06-PM-7.png"
+      "https://i.ibb.co/JRYSLc8Z/Chat-GPT-Image-Aug-7-2026-05-31-06-PM-7.png",
+      "https://i.ibb.co/G34xnwPT/Chat-GPT-Image-Aug-7-2026-07-22-58-PM-6.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -92,7 +97,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/ns1KLWd9/Chat-GPT-Image-Aug-7-2026-04-23-01-PM-3-removebg-preview.png",
-      "https://i.ibb.co/zVRwh1w1/Chat-GPT-Image-Aug-7-2026-05-31-07-PM-10.png"
+      "https://i.ibb.co/zVRwh1w1/Chat-GPT-Image-Aug-7-2026-05-31-07-PM-10.png",
+      "https://i.ibb.co/v6H9WnnP/Chat-GPT-Image-Aug-7-2026-07-22-58-PM-7.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -104,7 +110,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/dwcSpjtK/Chat-GPT-Image-Aug-7-2026-04-23-02-PM-4-removebg-preview.png",
-      "https://i.ibb.co/0ysTznQ2/Chat-GPT-Image-Aug-7-2026-05-31-06-PM-8.png"
+      "https://i.ibb.co/0ysTznQ2/Chat-GPT-Image-Aug-7-2026-05-31-06-PM-8.png",
+      "https://i.ibb.co/YBfrr3kQ/Chat-GPT-Image-Aug-7-2026-07-22-59-PM-8.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -116,7 +123,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/rgZBXkT/Chat-GPT-Image-Aug-7-2026-04-23-02-PM-5-removebg-preview.png",
-      "https://i.ibb.co/39w0nMbp/Chat-GPT-Image-Aug-7-2026-05-31-07-PM-9.png"
+      "https://i.ibb.co/39w0nMbp/Chat-GPT-Image-Aug-7-2026-05-31-07-PM-9.png",
+      "https://i.ibb.co/x8Mqw68V/Chat-GPT-Image-Aug-7-2026-07-22-59-PM-9.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -128,7 +136,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/JFtvvrHf/Chat-GPT-Image-Aug-7-2026-04-23-03-PM-6-removebg-preview.png",
-      "https://i.ibb.co/GQGzbhR9/Chat-GPT-Image-Aug-7-2026-05-31-05-PM-5.png"
+      "https://i.ibb.co/GQGzbhR9/Chat-GPT-Image-Aug-7-2026-05-31-05-PM-5.png",
+      "https://i.ibb.co/HL6gP02j/Chat-GPT-Image-Aug-7-2026-07-23-00-PM-10.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -140,7 +149,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/qLy7Mp23/Chat-GPT-Image-Aug-7-2026-04-23-00-PM-1-removebg-preview.png",
-      "https://i.ibb.co/FL3p2grh/Chat-GPT-Image-Aug-7-2026-05-36-07-PM-2.png"
+      "https://i.ibb.co/FL3p2grh/Chat-GPT-Image-Aug-7-2026-05-36-07-PM-2.png",
+      "https://i.ibb.co/WpGNrf2j/Chat-GPT-Image-Aug-7-2026-07-26-03-PM-1.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -152,7 +162,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/n80hN5Wx/Chat-GPT-Image-Aug-7-2026-04-23-01-PM-2-removebg-preview.png",
-      "https://i.ibb.co/zT73qYjq/Chat-GPT-Image-Aug-7-2026-05-36-08-PM-3.png"
+      "https://i.ibb.co/zT73qYjq/Chat-GPT-Image-Aug-7-2026-05-36-08-PM-3.png",
+      "https://i.ibb.co/svkKPrBn/Chat-GPT-Image-Aug-7-2026-07-26-04-PM-2.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
@@ -164,7 +175,8 @@ const products = [
     originalPrice: 650, 
     images: [
       "https://i.ibb.co/wqYW1hd/Chat-GPT-Image-Aug-7-2026-04-22-52-PM-removebg-preview.png",
-      "https://i.ibb.co/tMGYgDLt/Chat-GPT-Image-Aug-7-2026-05-36-07-PM-1.png"
+      "https://i.ibb.co/tMGYgDLt/Chat-GPT-Image-Aug-7-2026-05-36-07-PM-1.png",
+      "https://i.ibb.co/h1hCxwBp/Chat-GPT-Image-Aug-7-2026-07-26-04-PM-3.png"
     ],
     discount: "-60%",
     description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
