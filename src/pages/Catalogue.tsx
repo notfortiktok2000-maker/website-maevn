@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Truck, WalletCards, ShieldCheck } from "lucide-react";
 import { useCart } from "../lib/CartContext";
 import watchGalleryImg from "../assets/images/watch_gallery_1_1783266764204.jpg";
 import watchHeroImg from "../assets/images/watch_hero_1783266750828.jpg";
@@ -175,6 +176,7 @@ export default function Catalogue() {
   const { addToCart } = useCart();
   const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
   const [modalQuantity, setModalQuantity] = useState(1);
+  const [selectedBundle, setSelectedBundle] = useState<1 | 2>(1);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   useEffect(() => {
     if (selectedProduct) {
@@ -206,6 +208,7 @@ export default function Catalogue() {
   const handleProductClick = (product: typeof products[0]) => {
     setSelectedProduct(product);
     setModalQuantity(1);
+    setSelectedBundle(1);
     setActiveImageIndex(0);
   };
 
@@ -349,21 +352,71 @@ export default function Catalogue() {
                   {selectedProduct.description || "Design exclusif aux lignes épurées. Une montre intemporelle conçue pour ceux qui apprécient l'élégance minimaliste."}
                 </p>
                 
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="text-xs font-medium uppercase tracking-widest text-gray-400">Quantité</span>
-                  <div className="flex items-center gap-4 border border-gray-200 rounded-full px-4 py-2">
-                    <button onClick={() => setModalQuantity(Math.max(1, modalQuantity - 1))} className="w-8 h-8 flex items-center justify-center text-xl hover:bg-gray-50 rounded-full">-</button>
-                    <span className="font-medium w-4 text-center">{modalQuantity}</span>
-                    <button onClick={() => setModalQuantity(modalQuantity + 1)} className="w-8 h-8 flex items-center justify-center text-xl hover:bg-gray-50 rounded-full">+</button>
-                  </div>
+                <div className="flex flex-col gap-3 mb-6">
+                  <div className="text-[10px] uppercase tracking-widest text-gray-500 font-medium mb-1">Choisissez votre offre</div>
+                  
+                  <label onClick={() => setSelectedBundle(1)} className={`cursor-pointer flex flex-col p-4 rounded-xl border-2 transition-all ${selectedBundle === 1 ? 'border-[#0a0a0a] bg-gray-50' : 'border-gray-100 hover:border-gray-200'}`}>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-4 h-4 rounded-full border flex items-center justify-center ${selectedBundle === 1 ? 'border-[#0a0a0a]' : 'border-gray-300'}`}>
+                          {selectedBundle === 1 && <div className="w-2 h-2 bg-[#0a0a0a] rounded-full" />}
+                        </div>
+                        <span className="font-medium text-sm">1 MONTRE</span>
+                      </div>
+                      <span className="font-medium">{selectedProduct.price} DH</span>
+                    </div>
+                    <div className="text-[11px] text-gray-500 mt-1 ml-7">Livraison offerte partout au Maroc</div>
+                  </label>
+
+                  <label onClick={() => setSelectedBundle(2)} className={`cursor-pointer flex flex-col p-4 rounded-xl border-2 transition-all relative ${selectedBundle === 2 ? 'border-[#0a0a0a] bg-green-50/50' : 'border-gray-100 hover:border-gray-200'}`}>
+                    <div className="absolute -top-2.5 right-4 bg-[#0a0a0a] text-white text-[9px] font-medium px-2 py-0.5 rounded-full uppercase tracking-wider">
+                      Meilleure offre
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-4 h-4 rounded-full border flex items-center justify-center ${selectedBundle === 2 ? 'border-[#0a0a0a]' : 'border-gray-300'}`}>
+                          {selectedBundle === 2 && <div className="w-2 h-2 bg-[#0a0a0a] rounded-full" />}
+                        </div>
+                        <span className="font-medium text-sm">2 MONTRES</span>
+                      </div>
+                      <div className="flex flex-col items-end">
+                         <span className="font-medium">{selectedProduct.price * 2 - 50} DH</span>
+                         <span className="text-[10px] text-gray-400 line-through">{selectedProduct.price * 2} DH</span>
+                      </div>
+                    </div>
+                    <div className="text-[11px] text-green-600 font-medium mt-1 ml-7">Économisez 50 DH + Livraison offerte</div>
+                  </label>
                 </div>
 
-                <button 
-                  onClick={handleAddToCart}
-                  className="w-full bg-[#0a0a0a] text-white py-4 rounded-full font-medium uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-colors active:scale-95 transform duration-200"
-                >
-                  Ajouter au Panier
-                </button>
+                <div className="flex flex-col gap-4">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="w-full bg-[#0a0a0a] text-white py-4 rounded-full font-medium uppercase tracking-[0.2em] text-xs hover:bg-gray-800 transition-colors active:scale-95 transform duration-200 shadow-lg shadow-black/10"
+                  >
+                    Ajouter au Panier
+                  </button>
+                  
+                  <div className="text-center">
+                    <p className="text-[11px] text-gray-500">
+                      {selectedBundle === 2 ? "Vous économisez 50 DH sur cette commande." : "Livraison offerte partout au Maroc."}
+                    </p>
+                  </div>
+
+                  <div className="flex items-start justify-between gap-2 mt-2 pt-4 border-t border-gray-100">
+                    <div className="flex flex-col items-center flex-1 text-center gap-1.5">
+                      <Truck className="w-4 h-4 text-gray-600" />
+                      <span className="text-[9px] uppercase tracking-wider text-gray-500 leading-tight">Livraison<br/>Offerte</span>
+                    </div>
+                    <div className="flex flex-col items-center flex-1 text-center gap-1.5">
+                      <WalletCards className="w-4 h-4 text-gray-600" />
+                      <span className="text-[9px] uppercase tracking-wider text-gray-500 leading-tight">Paiement à<br/>la livraison</span>
+                    </div>
+                    <div className="flex flex-col items-center flex-1 text-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-gray-600" />
+                      <span className="text-[9px] uppercase tracking-wider text-gray-500 leading-tight">Garantie<br/>Qualité</span>
+                    </div>
+                  </div>
+                </div>
                 <button 
                   onClick={closeProductModal}
                   className="mt-4 w-full text-gray-400 text-xs font-medium uppercase tracking-wider hover:text-[#0a0a0a] transition-colors"

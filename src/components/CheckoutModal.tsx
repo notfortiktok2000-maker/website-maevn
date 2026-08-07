@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../lib/CartContext";
 
 export default function CheckoutModal({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
-  const { items, cartTotal, clearCart } = useCart();
+  const { items, cartTotal, cartSubtotal, cartDiscount, clearCart } = useCart();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
