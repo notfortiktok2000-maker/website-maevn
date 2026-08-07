@@ -14,12 +14,159 @@ gsap.registerPlugin(ScrollTrigger);
 const products = [
   { 
     id: 1, 
-    name: "CARTIER SANTOS - CADRAN BLEU", 
+    name: "ROLEX DATEJUST – CADRAN BLEU", 
     price: 259, 
     originalPrice: 650, 
-    image: "https://i.ibb.co/20pL8JRW/Screenshot-2026-07-06-020229-removebg-preview.png", 
+    images: [
+      "https://i.ibb.co/YFxFw5D7/Chat-GPT-Image-Aug-7-2026-04-23-03-PM-7-removebg-preview.png",
+      "https://i.ibb.co/rGMn6WNH/Chat-GPT-Image-Aug-7-2026-05-31-05-PM-6.png"
+    ],
     discount: "-60%",
     description: "Design carré élégant, bracelet acier, cadran minimaliste , ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 2, 
+    name: "G-SHOCK TRANSPARENT", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/Ldxg4KCb/Chat-GPT-Image-Aug-7-2026-04-26-32-PM-6-removebg-preview.png",
+      "https://i.ibb.co/ks410TB7/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-1.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 3, 
+    name: "ROLEX LAND-DWELLER – TIFFANY BLUE", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/G4FKsdfs/Chat-GPT-Image-Aug-7-2026-04-26-30-PM-1-removebg-preview.png",
+      "https://i.ibb.co/sdTKqsCq/Chat-GPT-Image-Aug-7-2026-05-31-05-PM-4.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 4, 
+    name: "POEDAGAR – CADRAN NOIR", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/XcGZ616/Chat-GPT-Image-Aug-7-2026-04-26-30-PM-2-removebg-preview.png",
+      "https://i.ibb.co/LXCNjpsz/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-2.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 5, 
+    name: "POEDAGAR – BLACK & ROSE GOLD", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/YFCP2W5S/Chat-GPT-Image-Aug-7-2026-04-26-31-PM-3-removebg-preview.png",
+      "https://i.ibb.co/Pvmm2KQP/Chat-GPT-Image-Aug-7-2026-05-31-04-PM-3.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 6, 
+    name: "ROLEX – CADRAN BLANC", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/8ggWxRFp/Chat-GPT-Image-Aug-7-2026-04-23-04-PM-8-removebg-preview.png",
+      "https://i.ibb.co/JRYSLc8Z/Chat-GPT-Image-Aug-7-2026-05-31-06-PM-7.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 7, 
+    name: "HUBLOT BIG BANG UNICO – BLEU", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/ns1KLWd9/Chat-GPT-Image-Aug-7-2026-04-23-01-PM-3-removebg-preview.png",
+      "https://i.ibb.co/zVRwh1w1/Chat-GPT-Image-Aug-7-2026-05-31-07-PM-10.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 8, 
+    name: "HUBLOT BIG BANG – GREY SKELETON", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/dwcSpjtK/Chat-GPT-Image-Aug-7-2026-04-23-02-PM-4-removebg-preview.png",
+      "https://i.ibb.co/0ysTznQ2/Chat-GPT-Image-Aug-7-2026-05-31-06-PM-8.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 9, 
+    name: "OMEGA SEAMASTER – CADRAN NOIR", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/rgZBXkT/Chat-GPT-Image-Aug-7-2026-04-23-02-PM-5-removebg-preview.png",
+      "https://i.ibb.co/39w0nMbp/Chat-GPT-Image-Aug-7-2026-05-31-07-PM-9.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 10, 
+    name: "OMEGA AQUA TERRA – CADRAN BLEU", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/JFtvvrHf/Chat-GPT-Image-Aug-7-2026-04-23-03-PM-6-removebg-preview.png",
+      "https://i.ibb.co/GQGzbhR9/Chat-GPT-Image-Aug-7-2026-05-31-05-PM-5.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 11, 
+    name: "PATEK PHILIPPE NAUTILUS – CADRAN NOIR", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/qLy7Mp23/Chat-GPT-Image-Aug-7-2026-04-23-00-PM-1-removebg-preview.png",
+      "https://i.ibb.co/FL3p2grh/Chat-GPT-Image-Aug-7-2026-05-36-07-PM-2.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 12, 
+    name: "HUBLOT BIG BANG SKELETON – BLEU", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/n80hN5Wx/Chat-GPT-Image-Aug-7-2026-04-23-01-PM-2-removebg-preview.png",
+      "https://i.ibb.co/zT73qYjq/Chat-GPT-Image-Aug-7-2026-05-36-08-PM-3.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
+  },
+  { 
+    id: 13, 
+    name: "CARTIER SANTOS – CADRAN BLANC", 
+    price: 259, 
+    originalPrice: 650, 
+    images: [
+      "https://i.ibb.co/wqYW1hd/Chat-GPT-Image-Aug-7-2026-04-22-52-PM-removebg-preview.png",
+      "https://i.ibb.co/tMGYgDLt/Chat-GPT-Image-Aug-7-2026-05-36-07-PM-1.png"
+    ],
+    discount: "-60%",
+    description: "Design élégant, finitions soignées. La montre parfaite pour sublimer votre style au quotidien. ET LIVRAISON GRATUITE PARTOUT AU MAROC"
   }
 ];
 
@@ -28,6 +175,7 @@ export default function Catalogue() {
   const { addToCart } = useCart();
   const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
   const [modalQuantity, setModalQuantity] = useState(1);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   useGSAP(() => {
     gsap.fromTo(".product-card", 
@@ -49,6 +197,7 @@ export default function Catalogue() {
   const handleProductClick = (product: typeof products[0]) => {
     setSelectedProduct(product);
     setModalQuantity(1);
+    setActiveImageIndex(0);
   };
 
   const closeProductModal = () => {
@@ -62,7 +211,7 @@ export default function Catalogue() {
         name: selectedProduct.name,
         price: selectedProduct.price,
         quantity: modalQuantity,
-        image: selectedProduct.image
+        image: selectedProduct.images[0]
       });
       closeProductModal();
     }
@@ -83,7 +232,7 @@ export default function Catalogue() {
               "item": {
                 "@type": "Product",
                 "name": product.name,
-                "image": `https://maevn-watches.com${product.image}`,
+                "image": `https://maevn-watches.com${product.images[0]}`,
                 "description": `Montre de luxe ${product.name} par MAEVN WATCHES`,
                 "brand": {
                   "@type": "Brand",
@@ -115,7 +264,7 @@ export default function Catalogue() {
                 <div key={product.id} className="product-card group cursor-pointer flex flex-col h-full" onClick={() => handleProductClick(product)}>
                   <div className="relative aspect-square overflow-hidden rounded-xl mb-4 bg-[#f5f5f5] flex-shrink-0">
                     <img 
-                      src={product.image} 
+                      src={product.images[0]} 
                       alt={`Montre MAEVN Watches ${product.name} design élégant`} 
                       className="w-full h-full object-contain p-4 md:p-8 transition-transform duration-700 ease-out group-hover:scale-105 mix-blend-multiply"
                     />
@@ -138,7 +287,7 @@ export default function Catalogue() {
                             name: product.name,
                             price: product.price,
                             quantity: 1,
-                            image: product.image
+                            image: product.images[0]
                           });
                         }}
                         className="w-full bg-[#0a0a0a] text-white text-[9px] md:text-[10px] font-medium uppercase tracking-[0.2em] py-3.5 px-4 rounded-xl transition-all duration-300 hover:bg-gray-800 active:scale-95"
@@ -159,8 +308,25 @@ export default function Catalogue() {
               className="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-y-auto shadow-2xl animate-in fade-in zoom-in duration-300"
               onClick={e => e.stopPropagation()}
             >
-              <div className="w-full md:w-1/2 bg-[#f5f5f5] shrink-0 h-64 md:h-auto relative flex items-center justify-center p-8">
-                <img src={selectedProduct.image} alt={`Montre MAEVN Watches ${selectedProduct.name} en détail`} className="w-full h-full object-contain mix-blend-multiply" />
+              <div className="w-full md:w-1/2 bg-[#f5f5f5] shrink-0 h-[350px] md:h-auto relative flex flex-col p-4 md:p-8">
+                <div className="flex-1 relative flex items-center justify-center mb-4">
+                  <img 
+                    src={selectedProduct.images[activeImageIndex]} 
+                    alt={`Montre MAEVN Watches ${selectedProduct.name} en détail`} 
+                    className={`w-full h-full mix-blend-multiply ${activeImageIndex === 0 ? 'object-contain' : 'object-cover rounded-lg'}`} 
+                  />
+                </div>
+                <div className="flex justify-center gap-3">
+                  {selectedProduct.images.map((img, idx) => (
+                    <button 
+                      key={idx}
+                      onClick={(e) => { e.stopPropagation(); setActiveImageIndex(idx); }}
+                      className={`w-16 h-16 rounded-md overflow-hidden border-2 transition-colors ${activeImageIndex === idx ? 'border-[#0a0a0a]' : 'border-transparent hover:border-gray-300'}`}
+                    >
+                      <img src={img} alt="" className={`w-full h-full mix-blend-multiply ${idx === 0 ? 'object-contain bg-white' : 'object-cover'}`} />
+                    </button>
+                  ))}
+                </div>
               </div>
               <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center">
                 <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">MAEVN WATCHES</div>
