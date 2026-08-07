@@ -1,11 +1,9 @@
-import {
-  TestimonialsColumn,
-  type TestimonialItem,
-} from "./ui/testimonials-columns-1";
-import { motion, useReducedMotion } from "motion/react";
-import { ShieldCheck, Truck, WalletCards } from "lucide-react";
+const fs = require('fs');
+const path = './src/components/Testimonials.tsx';
 
-const testimonials: TestimonialItem[] = [
+let content = fs.readFileSync(path, 'utf8');
+
+const newTestimonials = `const testimonials: TestimonialItem[] = [
   {
     text: "Sra7a kent khayef men qualité, walakin fach wslatni l9itha na9iya bzaf. Katban classy f yed w ma hiyach khfifa bzaaf.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80",
@@ -151,39 +149,13 @@ const testimonials: TestimonialItem[] = [
 const mobileTestimonials = testimonials; // All 20 for mobile
 const firstColumn = testimonials.slice(0, 7);
 const secondColumn = testimonials.slice(7, 14);
-const thirdColumn = testimonials.slice(14, 21);
+const thirdColumn = testimonials.slice(14, 21);`;
 
+const regex = /const testimonials: TestimonialItem\[\] = \[(?:[^\]]|\](?!\s*;))*\s*\];\s*const firstColumn = testimonials\.slice\([\s\S]*?testimonials\.slice\(.*?\);/;
+content = content.replace(regex, newTestimonials);
 
-const Testimonials = () => {
-  const prefersReducedMotion = useReducedMotion();
-
-  return (
-    <section
-      id="avis-clients"
-      className="relative overflow-hidden bg-[#080808] px-4 py-20 text-white sm:px-6 sm:py-24 lg:px-8"
-    >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-72 w-[80%] -translate-x-1/2 rounded-full bg-white/[0.035] blur-3xl"
-      />
-
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <motion.div
-          initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: prefersReducedMotion ? 0 : 0.8,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-          viewport={{ once: true, amount: 0.3 }}
-          className="mx-auto flex max-w-2xl flex-col items-center text-center"
-        >
-          <h2 className="mt-4 max-w-xl text-3xl font-medium leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-            Déjà choisie par plus de 800 clients au Maroc
-          </h2>
-        </motion.div>
-
-        <div className="flex justify-center gap-6 mt-10 max-h-[740px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
+const columnsRegex = /<div className="flex justify-center gap-6 mt-10 max-h-\[740px\] overflow-hidden \[mask-image:linear-gradient\(to_bottom,transparent,black_20%,black_80%,transparent\)\]">[\s\S]*?<\/div>/;
+const newColumns = `<div className="flex justify-center gap-6 mt-10 max-h-[740px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
             <TestimonialsColumn
               testimonials={mobileTestimonials}
               className="md:hidden"
@@ -204,10 +176,8 @@ const Testimonials = () => {
               className="hidden lg:block"
               duration={17}
             />
-        </div>
-      </div>
-    </section>
-  );
-};
+        </div>`;
 
-export default Testimonials;
+content = content.replace(columnsRegex, newColumns);
+
+fs.writeFileSync(path, content, 'utf8');

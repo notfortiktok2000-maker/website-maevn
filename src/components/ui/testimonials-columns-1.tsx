@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { useReducedMotion } from "motion/react";
 
 export interface TestimonialItem {
   text: string;
@@ -26,17 +26,9 @@ export const TestimonialsColumn = ({
 
   return (
     <div className={className}>
-      <motion.div
-        animate={{
-          translateY: prefersReducedMotion ? "0%" : "-50%",
-        }}
-        transition={{
-          duration: prefersReducedMotion ? 0 : (duration || 18),
-          repeat: prefersReducedMotion ? 0 : Infinity,
-          ease: "linear",
-          repeatType: "loop",
-        }}
-        className="flex flex-col gap-6 pb-6"
+      <div
+        className={`flex flex-col gap-6 pb-6 ${prefersReducedMotion ? '' : 'animate-marquee-vertical'}`}
+        style={{ '--duration': `${duration || 18}s` } as React.CSSProperties}
       >
         {[0, 1].map((copyIndex) => (
           <React.Fragment key={copyIndex}>
@@ -84,7 +76,7 @@ export const TestimonialsColumn = ({
             )}
           </React.Fragment>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

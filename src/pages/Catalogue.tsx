@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -176,6 +176,15 @@ export default function Catalogue() {
   const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
   const [modalQuantity, setModalQuantity] = useState(1);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  useEffect(() => {
+    if (selectedProduct) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [selectedProduct]);
+
 
   useGSAP(() => {
     gsap.fromTo(".product-card", 
@@ -305,11 +314,11 @@ export default function Catalogue() {
         {selectedProduct && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={closeProductModal}>
             <div 
-              className="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-y-auto shadow-2xl animate-in fade-in zoom-in duration-300"
+              className="bg-white rounded-2xl w-[calc(100vw-24px)] md:w-full max-w-4xl max-h-[calc(100dvh-24px)] md:max-h-[90vh] flex flex-col md:flex-row overflow-y-auto md:overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
               onClick={e => e.stopPropagation()}
             >
-              <div className="w-full md:w-1/2 bg-[#f5f5f5] shrink-0 h-[350px] md:h-auto relative flex flex-col p-4 md:p-8">
-                <div className="flex-1 relative flex items-center justify-center mb-4">
+              <div className="w-full md:w-1/2 bg-[#f5f5f5] shrink-0 relative flex flex-col p-4 md:p-8">
+                <div className="relative flex items-center justify-center mb-4 h-[240px] sm:h-[300px] md:h-full md:min-h-[400px]">
                   <img 
                     src={selectedProduct.images[activeImageIndex]} 
                     alt={`Montre MAEVN Watches ${selectedProduct.name} en détail`} 
@@ -328,13 +337,13 @@ export default function Catalogue() {
                   ))}
                 </div>
               </div>
-              <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center">
+              <div className="w-full md:w-1/2 p-5 sm:p-6 md:p-12 flex flex-col justify-center pb-24 md:pb-12 md:overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
                 <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">MAEVN WATCHES</div>
-                <h2 className="text-2xl md:text-3xl font-medium uppercase tracking-wider mb-4">{selectedProduct.name}</h2>
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-2xl font-medium">{selectedProduct.price} DH</span>
+                <h2 className="text-[22px] leading-[1.2] sm:text-2xl md:text-3xl font-medium uppercase tracking-wider mb-3 md:mb-4">{selectedProduct.name}</h2>
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-5 md:mb-6">
+                  <span className="text-xl sm:text-2xl font-medium">{selectedProduct.price} DH</span>
                   <span className="text-sm text-gray-400 line-through">{selectedProduct.originalPrice} DH</span>
-                  <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded font-medium">{selectedProduct.discount}</span>
+                  <span className="text-[10px] sm:text-xs bg-red-100 text-red-600 px-2 py-1 rounded font-medium">{selectedProduct.discount}</span>
                 </div>
                 <p className="text-gray-600 text-sm mb-8 leading-relaxed">
                   {selectedProduct.description || "Design exclusif aux lignes épurées. Une montre intemporelle conçue pour ceux qui apprécient l'élégance minimaliste."}
